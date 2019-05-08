@@ -75,8 +75,7 @@ class Automatic
         bool $enableCompression = false,
         bool $enableImageEnhancement = false,
         bool $enableRedeyeRemoval = false
-    )
-    {
+    ) {
         /* Just initialize empty in any case */
         $this->params = [];
 

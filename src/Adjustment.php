@@ -2,7 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\AdjustmentParameters;
 use function \http_build_query;
 
 /**
