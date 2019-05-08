@@ -39,7 +39,6 @@ final class AutomaticTest extends TestCase
 
         $subject->setParams($params);
 
-        $this->assertArrayHasKey(Automatic::VALUE_COMPRESSION, $subject->getParams());
         $this->assertEquals($params, $subject->getParams());
     }
 
