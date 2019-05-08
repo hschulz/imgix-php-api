@@ -65,33 +65,33 @@ class Automatic
     /**
      * Creates a new automatic optimization with no features enabled.
      *
-     * @param bool $enableAutomaticOutputFormat
-     * @param bool $enableCompression
-     * @param bool $enableImageEnhancement
-     * @param bool $enableRedeyeRemoval
+     * @param bool $automaticOutputFormat
+     * @param bool $imageCompression
+     * @param bool $imageEnhancement
+     * @param bool $redeyeRemoval
      */
     public function __construct(
-        bool $enableAutomaticOutputFormat = false,
-        bool $enableCompression = false,
-        bool $enableImageEnhancement = false,
-        bool $enableRedeyeRemoval = false
+        bool $automaticOutputFormat = false,
+        bool $imageCompression = false,
+        bool $imageEnhancement = false,
+        bool $redeyeRemoval = false
     ) {
         /* Just initialize empty in any case */
         $this->params = [];
 
-        if ($enableAutomaticOutputFormat) {
+        if ($automaticOutputFormat) {
             $this->params[] = self::VALUE_FORMAT;
         }
 
-        if ($enableCompression) {
+        if ($imageCompression) {
             $this->params[] = self::VALUE_COMPRESSION;
         }
 
-        if ($enableImageEnhancement) {
+        if ($imageEnhancement) {
             $this->params[] = self::VALUE_ENHANCE;
         }
 
-        if ($enableRedeyeRemoval) {
+        if ($redeyeRemoval) {
             $this->params[] = self::VALUE_REDEYE;
         }
     }
@@ -119,15 +119,58 @@ class Automatic
     }
 
     /**
+     *
+     * @return array
+     */
+    public function getParams(): array
+    {
+        return $this->params;
+    }
+
+    /**
+     *
+     * @param array $params
+     * @return void
+     */
+    public function setParams(array $params): void
+    {
+        $this->params = $params;
+    }
+
+    /**
+     *
+     * @param string $param
+     * @return void
+     */
+    protected function addParam(string $param): void
+    {
+        if (array_search($param, $this->params, true) === false) {
+            $this->params[] = $param;
+        }
+    }
+
+    /**
+     *
+     * @param string $param
+     * @return void
+     */
+    protected function removeParam(string $param): void
+    {
+        $pos = array_search($param, $this->params, true);
+
+        if ($pos !== false) {
+            unset($this->params[$pos]);
+        }
+    }
+
+    /**
      * Enables the automatic output format detection feature.
      *
      * @return void
      */
-    public function enableAutoFormat(): void
+    public function enableAutoOutputFormat(): void
     {
-        if (array_search(self::VALUE_FORMAT, $this->params, true) === false) {
-            $this->params[] = self::VALUE_FORMAT;
-        }
+        $this->addParam(self::VALUE_FORMAT);
     }
 
     /**
@@ -135,12 +178,62 @@ class Automatic
      *
      * @return void
      */
-    public function disableAutoFormat(): void
+    public function disableAutoOutputFormat(): void
     {
-        $pos = array_search(self::VALUE_FORMAT, $this->params, true);
+        $this->removeParam(self::VALUE_FORMAT);
+    }
 
-        if ($pos !== false) {
-            unset($this->params[$pos]);
-        }
+    /**
+     *
+     * @return void
+     */
+    public function enableImageCompression(): void
+    {
+        $this->addParam(self::VALUE_COMPRESSION);
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function disableImageCompression(): void
+    {
+        $this->removeParam(self::VALUE_COMPRESSION);
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function enableImageEnhancement(): void
+    {
+        $this->addParam(self::VALUE_ENHANCE);
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function disableImageEnhancement(): void
+    {
+        $this->removeParam(self::VALUE_ENHANCE);
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function enableRedeyeRemoval(): void
+    {
+        $this->addParam(self::VALUE_REDEYE);
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function disableRedeyeRemoval(): void
+    {
+        $this->removeParam(self::VALUE_REDEYE);
     }
 }
