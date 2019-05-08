@@ -31,7 +31,7 @@ final class AutomaticTest extends TestCase
         $this->assertEquals($expected, (string) $subject);
     }
 
-    public function canSetParameters(): void
+    public function testCanSetParameters(): void
     {
         $subject = new Automatic();
 
