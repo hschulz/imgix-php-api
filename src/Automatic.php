@@ -2,11 +2,12 @@
 
 namespace hschulz\imgix;
 
+use \hschulz\imgix\QueryEmitter;
 use function \array_search;
 use function \count;
 use function \implode;
 
-class Automatic
+class Automatic extends QueryEmitter
 {
     /**
      * The auto parameter helps you automate a baseline level of optimization
@@ -76,8 +77,7 @@ class Automatic
         bool $imageEnhancement = false,
         bool $redeyeRemoval = false
     ) {
-        /* Just initialize empty in any case */
-        $this->params = [];
+        parent::__construct();
 
         if ($automaticOutputFormat) {
             $this->params[] = self::VALUE_FORMAT;
@@ -97,16 +97,6 @@ class Automatic
     }
 
     /**
-     * Returns the query string when the object is cast to string.
-     *
-     * @return string
-     */
-    public function __toString(): string
-    {
-        return $this->getQueryString();
-    }
-
-    /**
      * Returns the query string containing all enabled features.
      *
      * @return string
@@ -116,25 +106,6 @@ class Automatic
         /* When at least one feature is enabled the query string is created */
         return count($this->params) > 0
             ? self::PARAMETER_NAME . '=' . implode(',', $this->params) : '';
-    }
-
-    /**
-     *
-     * @return array
-     */
-    public function getParams(): array
-    {
-        return $this->params;
-    }
-
-    /**
-     *
-     * @param array $params
-     * @return void
-     */
-    public function setParams(array $params): void
-    {
-        $this->params = $params;
     }
 
     /**
