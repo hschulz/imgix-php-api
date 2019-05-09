@@ -2,7 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
 use function \array_search;
 use function \count;
 use function \implode;
