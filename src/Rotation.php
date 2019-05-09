@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * The rotation parameters allow you to change the orientation of your image,
  * by either flipping along its axes or rotating around the center.

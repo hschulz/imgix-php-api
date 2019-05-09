@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * These parameters modify fit=facearea mode when sizing an image to zoom in and
  * center on any faces within an image. They make it easy to auto-generate

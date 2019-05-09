@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Focal point cropping gives you the ability to choose and fine-tune the point
  * of interest of your image for better art direction.
