@@ -31,5 +31,8 @@
         "phpunit/phpunit": "^7.5.9"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit --bootstrap=./vendor/autoload.php --whitelist=./src/ --testdox ./Tests/"
+    }
 }
