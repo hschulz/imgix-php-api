@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Outputs individual pages or vector assets from PDF or
  * Adobe® Illustrator® files (.ai, .eps) as images.

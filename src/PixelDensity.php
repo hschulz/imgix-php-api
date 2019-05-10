@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Controls the output density of your image, so you can serve images at the
  * correct density for every user's device from a single master image.
