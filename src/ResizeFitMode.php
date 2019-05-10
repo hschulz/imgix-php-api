@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * The fit parameter controls how the output image is fit to its target
  * dimensions after resizing, and how any background areas will be filled.

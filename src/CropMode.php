@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Crop mode controls how the image is aligned when fit=crop is set.
  * The w and h parameters should also be set, so that the crop behavior is

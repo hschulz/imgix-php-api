@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * The stylize parameters allow you to apply basic artistic effects
  * to your images.
