@@ -54,7 +54,6 @@ final class ResizeFitModeTest extends TestCase
         $this->assertFalse($subject->isScale());
         $this->assertEquals('my-value', $subject->getValue());
         $this->assertEquals(ResizeFitMode::PARAM_NAME . '=my-value', (string) $subject);
-
     }
 
     public function testCanSetClamp(): void
