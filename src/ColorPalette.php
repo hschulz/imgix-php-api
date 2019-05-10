@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Extracts a color palette from your image, which you can use to dynamically
  * define other design elements in your layout.
