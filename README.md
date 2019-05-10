@@ -1,7 +1,7 @@
 imgix php api
 =============
 
-Provides a small api to generate imgix urls.
+Provides a small object oriented api to generate imgix urls.
 
 [travis]: https://img.shields.io/travis/hschulz/imgix-php-api.svg?style=flat-square
 [codecov]: https://img.shields.io/codecov/c/github/hschulz/imgix-php-api.svg?style=flat-square
@@ -43,7 +43,7 @@ $uri = $builder->getImageUri('/path/to/your/image.jpg');
 
 ## Testing
 
-If you want to test your code when contributing you can use 
+If you want to test your code when contributing you can use
 
 ```shell
 ./vendor/bin/phpunit --bootstrap=./vendor/autoload.php --whitelist=./src/ --testdox ./Tests/
@@ -51,6 +51,29 @@ If you want to test your code when contributing you can use
 
 ## ToDo
 
-- [ ] Complete the API
-- [ ] Extend the manual
-- [ ] Add unit tests
+- Implement all API functions
+    - [X] Adjustment
+    - [X] Automatic
+    - [ ] Blending
+    - [ ] Border
+    - [X] Padding
+    - [ ] Color Palette
+    - [X] Face Detection
+    - [ ] Fill
+    - [X] Focal Point Crop
+    - [ ] Format
+    - [ ] Mask Image
+    - [ ] Noise Reduction
+    - [X] PDF
+    - [X] Pixel Density
+    - [X] Rotation
+    - [X] Size
+    - [X] Stylize
+    - [ ] Text
+    - [ ] Trim
+    - [ ] Typesetting Endpoint
+    - [ ] Watermark
+- [ ] Implement UriBuilder
+- Extend the documentation
+    - [ ] Complete code comments
+    - [ ] More example code
