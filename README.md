@@ -36,17 +36,19 @@ $focalPoint->setX(0.7);
 $focalPoint->setY(0.2);
 $focalPoint->setZoom(1.2);
 
-$builder->addFocalPointCrop($focalPoint);
+$builder->addQueryPart($focalPoint);
 
 $uri = $builder->getImageUri('/path/to/your/image.jpg');
 ```
 
 ## Testing
 
-If you want to test your code when contributing you can use
-
 ```shell
+# Either use the phpunit with whatever parameters you prefer
 ./vendor/bin/phpunit --bootstrap=./vendor/autoload.php --whitelist=./src/ --testdox ./Tests/
+
+# Or run the composer test script which is set to the above parameters
+composer.phar test
 ```
 
 ## ToDo
@@ -57,7 +59,7 @@ If you want to test your code when contributing you can use
     - [ ] Blending
     - [ ] Border
     - [X] Padding
-    - [ ] Color Palette
+    - [X] Color Palette
     - [X] Face Detection
     - [ ] Fill
     - [X] Focal Point Crop
@@ -67,13 +69,13 @@ If you want to test your code when contributing you can use
     - [X] PDF
     - [X] Pixel Density
     - [X] Rotation
+    - [ ] Security
     - [X] Size
     - [X] Stylize
     - [ ] Text
     - [ ] Trim
     - [ ] Typesetting Endpoint
     - [ ] Watermark
-- [ ] Implement UriBuilder
 - Extend the documentation
     - [ ] Complete code comments
     - [ ] More example code

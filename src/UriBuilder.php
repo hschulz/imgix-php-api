@@ -1,61 +1,97 @@
 <?php
 
-namespace hschulz\imgIx;
+namespace hschulz\imgix;
 
-use \hschulz\imgix\Adjustment;
-use \hschulz\imgix\Automatic;
+use \hschulz\imgix\QueryEmitter;
+use function \array_search;
+use function \implode;
 
+/**
+ *
+ */
 class UriBuilder
 {
     /**
+     * The complete imgix url.
+     *
      * @var string
      */
     protected $url = '';
 
     /**
-     * @var Adjustment
+     * Stores the added query string objects.
+     *
+     * @var array
      */
-    protected $adjustment = null;
+    protected $parts = [];
 
     /**
-     * @var Automatic
-     */
-    protected $automatic = null;
-
-    /**
+     * Creates a new query builder for the given imgix url.
      *
-     *
-     * @param string $url
+     * @param string $url The custom imgix url
      */
     public function __construct(string $url)
     {
         $this->url = $url;
-        $this->adjustment = null;
-        $this->automatic = null;
+        $this->parts = [];
     }
 
-    public function __toString(): string
+    /**
+     * Generates the customized imgix url including all added query parts.
+     *
+     * @param string $imagePath The requested image file.
+     * @return string The built url
+     */
+    public function getImageUri(string $imagePath): string
     {
-        return $this->getQueryString();
+        /* Temporary storage for query strings */
+        $params = [];
+
+        /* Iterate and convert objects into their query string representation */
+        foreach ($this->parts as $object) {
+            $params[] = (string) $object;
+        }
+
+        /* Build the basic image path url */
+        $url = $this->url . $imagePath;
+
+        /* If any parameters are to be added */
+        if (count($params) !== 0) {
+            $url .= '?' . implode('&', $params);
+        }
+
+        return $url;
     }
 
-    public function getQueryString(): string
+    /**
+     * Adds one of the customisation features to be added to the generated url.
+     *
+     * @param QueryEmitter $object The object to add
+     * @return void
+     */
+    public function addQueryPart(QueryEmitter $object): void
     {
-        return $this->url;
+        $pos = array_search($object, $this->parts, true);
+
+        /* Make sure the object doesn't already exist in the parts */
+        if ($pos === false) {
+            $this->parts[] = $object;
+        }
     }
 
-    public function getAdjustment(): ?Adjustment
+    /**
+     * Removes a previously added query part object.
+     *
+     * @param QueryEmitter $object The object to be removed.
+     * @return void
+     */
+    public function removeQueryPart(QueryEmitter $object): void
     {
-        return $this->adjustment;
-    }
+        $pos = array_search($object, $this->parts, true);
 
-    public function setAdjustment(Adjustment $adjustment): void
-    {
-        $this->adjustment = $adjustment;
-    }
-
-    public function getAutomatic(): ?Automatic
-    {
-        return $this->automatic;
+        /* Remove object if it was previously added */
+        if ($pos !== false) {
+            unset($this->parts[$pos]);
+        }
     }
 }
