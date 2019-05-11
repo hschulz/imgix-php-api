@@ -2,8 +2,6 @@
 
 namespace hschulz\imgix;
 
-use \hschulz\imgix\QueryEmitter;
-
 /**
  * Securing URLs adds a layer of security to your images, by blocking anyone
  * who doesn't have access to your account from altering the URLs.
