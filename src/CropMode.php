@@ -67,29 +67,33 @@ class CropMode extends QueryEmitter
     }
 
     /**
+     * Adds a parameter to the list of parameters used for this argument if
+     * it wasn't previously added.
      *
-     * @param string $param
+     * @param string $param The parameter name
      * @return void
      */
     protected function addParam(string $param): void
     {
+        /* Only add parameter once */
         if (array_search($param, $this->params, true) === false) {
             $this->params[] = $param;
         }
     }
 
     /**
+     * Removes a parameter from the list of used parameters for this argument.
      *
-     * @param string $param
+     * @param string $param The parameter name
      * @return void
      */
     protected function removeParam(string $param): void
     {
+        /* Get the array index of the requested parameter */
         $pos = array_search($param, $this->params, true);
 
-        if ($pos !== false) {
-            unset($this->params[$pos]);
-        }
+        /* Unset, even if the array index is 'false' */
+        unset($this->params[$pos]);
     }
 
     /**
