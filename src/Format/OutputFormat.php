@@ -134,7 +134,6 @@ class OutputFormat extends QueryEmitter
         $this->params[self::PARAM_NAME] = self::VALUE_JP2;
     }
 
-
     /**
      * Returns wether the set output format is jp2.
      *
@@ -154,7 +153,6 @@ class OutputFormat extends QueryEmitter
     {
         $this->params[self::PARAM_NAME] = self::VALUE_JPG;
     }
-
 
     /**
      * Returns wether the set output format is jpg.
@@ -176,7 +174,6 @@ class OutputFormat extends QueryEmitter
         $this->params[self::PARAM_NAME] = self::VALUE_JSON;
     }
 
-
     /**
      * Returns wether the set output format is json.
      *
@@ -196,7 +193,6 @@ class OutputFormat extends QueryEmitter
     {
         $this->params[self::PARAM_NAME] = self::VALUE_JXR;
     }
-
 
     /**
      * Returns wether the set output format is jxr.
@@ -218,7 +214,6 @@ class OutputFormat extends QueryEmitter
         $this->params[self::PARAM_NAME] = self::VALUE_PJPG;
     }
 
-
     /**
      * Returns wether the set output format is pjpg.
      *
@@ -238,7 +233,6 @@ class OutputFormat extends QueryEmitter
     {
         $this->params[self::PARAM_NAME] = self::VALUE_MP4;
     }
-
 
     /**
      * Returns wether the set output format is mp4.
@@ -260,7 +254,6 @@ class OutputFormat extends QueryEmitter
         $this->params[self::PARAM_NAME] = self::VALUE_PNG;
     }
 
-
     /**
      * Returns wether the set output format is png.
      *
@@ -280,7 +273,6 @@ class OutputFormat extends QueryEmitter
     {
         $this->params[self::PARAM_NAME] = self::VALUE_PNG8;
     }
-
 
     /**
      * Returns wether the set output format is png8.
@@ -302,7 +294,6 @@ class OutputFormat extends QueryEmitter
         $this->params[self::PARAM_NAME] = self::VALUE_PNG32;
     }
 
-
     /**
      * Returns wether the set output format is png32.
      *
@@ -322,7 +313,6 @@ class OutputFormat extends QueryEmitter
     {
         $this->params[self::PARAM_NAME] = self::VALUE_WEBM;
     }
-
 
     /**
      * Returns wether the set output format is webm.
