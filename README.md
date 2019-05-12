@@ -29,7 +29,7 @@ require_once './vendor/autoload.php';
 use \hschulz\imgix\FocalPointCrop;
 use \hschulz\imgix\UriBuilder;
 
-$builder = new UriBuilder('your-imgix-domain');
+$builder = new UriBuilder('https://your-domain.imgix.net');
 
 $focalPoint = new FocalPointCrop();
 $focalPoint->setX(0.7);
@@ -63,13 +63,13 @@ composer.phar test
     - [X] Face Detection
     - [ ] Fill
     - [X] Focal Point Crop
-    - [ ] Format
+    - [X] Format
     - [ ] Mask Image
     - [ ] Noise Reduction
     - [X] PDF
     - [X] Pixel Density
     - [X] Rotation
-    - [ ] Security
+    - [X] Security
     - [X] Size
     - [X] Stylize
     - [ ] Text
