@@ -56,6 +56,7 @@ $ https://your-domain.imgix.net/path/to/your/image.jpg?fp-x=0.7&fp-y=0.2&fp-z=1.
 
 # Or run the composer test script which is set to the above parameters
 composer.phar test
+```
 
 ## Contributing
 
