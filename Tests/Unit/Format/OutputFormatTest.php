@@ -14,6 +14,7 @@ final class OutputFormatTest extends TestCase
     {
         $subject = new OutputFormat();
 
+        $this->assertEmpty($subject->get());
         $this->assertEmpty((string) $subject);
         $this->assertEmpty($subject->getQueryString());
     }
@@ -26,15 +27,6 @@ final class OutputFormatTest extends TestCase
         $subject->unset();
 
         $this->assertEmpty((string) $subject);
-    }
-
-    public function testCanGetEmpty(): void
-    {
-        $subject = new OutputFormat();
-
-        $subject->setJson();
-
-        $this->assertEquals(OutputFormat::VALUE_JSON, $subject->get());
     }
 
     public function testCanSetGif(): void
