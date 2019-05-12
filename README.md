@@ -13,7 +13,7 @@ Provides a small object oriented api to generate imgix urls.
 
 [![Travis][travis]](https://travis-ci.org/hschulz/imgix-php-api) [![Codecov][codecov]](https://codecov.io/gh/hschulz/imgix-php-api) [![Style-CI][styleci-badge]](https://github.styleci.io/repos/185656646) ![PHP version][php-version] [![GitHub issues][github-issues]](https://github.com/hschulz/imgix-php-api/issues) ![Contributions welcome][contrib-welcome] [![license][license]](https://github.com/hschulz/imgix-php-api/blob/master/LICENSE)
 
-## Install
+## Installation
 
 ```shell
 composer.phar require hschulz/imgix-php-api
@@ -29,19 +29,26 @@ require_once './vendor/autoload.php';
 use \hschulz\imgix\FocalPointCrop;
 use \hschulz\imgix\UriBuilder;
 
+/* Create a new builder with your own imgix domain */
 $builder = new UriBuilder('https://your-domain.imgix.net');
 
+/* Create and configure features */
 $focalPoint = new FocalPointCrop();
 $focalPoint->setX(0.7);
 $focalPoint->setY(0.2);
 $focalPoint->setZoom(1.2);
 
+/* Apply features to the query builder */
 $builder->addQueryPart($focalPoint);
 
+/* Create the uri to the requested image path */
 $uri = $builder->getImageUri('/path/to/your/image.jpg');
+
+echo $uri
+$ https://your-domain.imgix.net/path/to/your/image.jpg?fp-x=0.7&fp-y=0.2&fp-z=1.2 
 ```
 
-## Testing
+## Running the tests
 
 ```shell
 # Either use the phpunit with whatever parameters you prefer
@@ -49,33 +56,22 @@ $uri = $builder->getImageUri('/path/to/your/image.jpg');
 
 # Or run the composer test script which is set to the above parameters
 composer.phar test
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/hschulz/imgix-php-api/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/hschulz/imgix-php-api/tags). 
+
+## Authors
+
+* **Hauke Schulz** - *Author* - [hschulz](https://github.com/hschulz)
+
+See also the list of [contributors](https://github.com/hschulz/imgix-php-api/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/hschulz/imgix-php-api/blob/master/LICENSE) file for details
 ```
-
-## ToDo
-
-- Implement all API functions
-    - [X] Adjustment
-    - [X] Automatic
-    - [ ] Blending
-    - [ ] Border
-    - [X] Padding
-    - [X] Color Palette
-    - [X] Face Detection
-    - [ ] Fill
-    - [X] Focal Point Crop
-    - [X] Format
-    - [ ] Mask Image
-    - [ ] Noise Reduction
-    - [X] PDF
-    - [X] Pixel Density
-    - [X] Rotation
-    - [X] Security
-    - [X] Size
-    - [X] Stylize
-    - [ ] Text
-    - [ ] Trim
-    - [ ] Typesetting Endpoint
-    - [ ] Watermark
-- Extend the documentation
-    - [ ] Complete code comments
-    - [ ] More example code
