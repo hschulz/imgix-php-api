@@ -2,6 +2,9 @@
 
 namespace hschulz\imgix;
 
+use \hschulz\imgix\Adjustment\Parameters;
+use \hschulz\imgix\QueryEmitter;
+
 /**
  * Adjustment class
  */
@@ -14,19 +17,19 @@ class Adjustment extends QueryEmitter
      */
     public function getBrightness(): int
     {
-        return $this->params[AdjustmentParameters::BRIGHTNESS] ?? 0;
+        return $this->params[Parameters::BRIGHTNESS] ?? 0;
     }
 
     /**
      * Brightness.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::BRIGHTNESS
+     * @see \hschulz\imgix\Parameters::BRIGHTNESS
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setBrightness(int $value): void
     {
-        $this->params[AdjustmentParameters::BRIGHTNESS] = $value;
+        $this->params[Parameters::BRIGHTNESS] = $value;
     }
 
     /**
@@ -36,7 +39,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetBrightness(): void
     {
-        unset($this->params[AdjustmentParameters::BRIGHTNESS]);
+        unset($this->params[Parameters::BRIGHTNESS]);
     }
 
     /**
@@ -46,19 +49,19 @@ class Adjustment extends QueryEmitter
      */
     public function getContrast(): int
     {
-        return $this->params[AdjustmentParameters::CONTRAST] ?? 0;
+        return $this->params[Parameters::CONTRAST] ?? 0;
     }
 
     /**
      * Contrast.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::CONTRAST
+     * @see \hschulz\imgix\Parameters::CONTRAST
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setContrast(int $value): void
     {
-        $this->params[AdjustmentParameters::CONTRAST] = $value;
+        $this->params[Parameters::CONTRAST] = $value;
     }
 
     /**
@@ -68,7 +71,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetContrast(): void
     {
-        unset($this->params[AdjustmentParameters::CONTRAST]);
+        unset($this->params[Parameters::CONTRAST]);
     }
 
     /**
@@ -78,19 +81,19 @@ class Adjustment extends QueryEmitter
      */
     public function getExposure(): int
     {
-        return $this->params[AdjustmentParameters::EXPOSURE] ?? 0;
+        return $this->params[Parameters::EXPOSURE] ?? 0;
     }
 
     /**
      * Exposure.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::EXPOSURE
+     * @see \hschulz\imgix\Parameters::EXPOSURE
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setExposure(int $value): void
     {
-        $this->params[AdjustmentParameters::EXPOSURE] = $value;
+        $this->params[Parameters::EXPOSURE] = $value;
     }
 
     /**
@@ -100,7 +103,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetExposure(): void
     {
-        unset($this->params[AdjustmentParameters::EXPOSURE]);
+        unset($this->params[Parameters::EXPOSURE]);
     }
 
     /**
@@ -110,19 +113,19 @@ class Adjustment extends QueryEmitter
      */
     public function getGamma(): int
     {
-        return $this->params[AdjustmentParameters::GAMMA] ?? 0;
+        return $this->params[Parameters::GAMMA] ?? 0;
     }
 
     /**
      * Gamma.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::GAMMA
+     * @see \hschulz\imgix\Parameters::GAMMA
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setGamma(int $value): void
     {
-        $this->params[AdjustmentParameters::GAMMA] = $value;
+        $this->params[Parameters::GAMMA] = $value;
     }
 
     /**
@@ -132,7 +135,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetGamma(): void
     {
-        unset($this->params[AdjustmentParameters::GAMMA]);
+        unset($this->params[Parameters::GAMMA]);
     }
 
     /**
@@ -142,19 +145,19 @@ class Adjustment extends QueryEmitter
      */
     public function getHighlight(): int
     {
-        return $this->params[AdjustmentParameters::HIGHLIGHT] ?? 0;
+        return $this->params[Parameters::HIGHLIGHT] ?? 0;
     }
 
     /**
      * Highlight.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::HIGHLIGHT
+     * @see \hschulz\imgix\Parameters::HIGHLIGHT
      * @param int $value Valid values are in the range -100 - 0. The default value is 0.
      * @return void
      */
     public function setHighlight(int $value): void
     {
-        $this->params[AdjustmentParameters::HIGHLIGHT] = $value;
+        $this->params[Parameters::HIGHLIGHT] = $value;
     }
 
     /**
@@ -164,7 +167,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetHighlight(): void
     {
-        unset($this->params[AdjustmentParameters::HIGHLIGHT]);
+        unset($this->params[Parameters::HIGHLIGHT]);
     }
 
     /**
@@ -174,19 +177,19 @@ class Adjustment extends QueryEmitter
      */
     public function getHueShift(): int
     {
-        return $this->params[AdjustmentParameters::HUE_SHIFT] ?? 0;
+        return $this->params[Parameters::HUE_SHIFT] ?? 0;
     }
 
     /**
      * Hue shift.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::HUE_SHIFT
+     * @see \hschulz\imgix\Parameters::HUE_SHIFT
      * @param int $value Valid values are in the range 0 – 359. The default value is 0.
      * @return void
      */
     public function setHueShift(int $value): void
     {
-        $this->params[AdjustmentParameters::HUE_SHIFT] = $value;
+        $this->params[Parameters::HUE_SHIFT] = $value;
     }
 
     /**
@@ -196,7 +199,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetHueShift(): void
     {
-        unset($this->params[AdjustmentParameters::HUE_SHIFT]);
+        unset($this->params[Parameters::HUE_SHIFT]);
     }
 
     /**
@@ -207,8 +210,8 @@ class Adjustment extends QueryEmitter
     public function getInvert(): bool
     {
         /* Test for set value and convert back to bool */
-        if (isset($this->params[AdjustmentParameters::INVERT])) {
-            return $this->params[AdjustmentParameters::INVERT] === 'true' ? true : false;
+        if (isset($this->params[Parameters::INVERT])) {
+            return $this->params[Parameters::INVERT] === 'true' ? true : false;
         }
 
         /* Default value */
@@ -218,13 +221,13 @@ class Adjustment extends QueryEmitter
     /**
      * Invert.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::INVERT
+     * @see \hschulz\imgix\Parameters::INVERT
      * @param bool $isInverted
      * @return void
      */
     public function setInvert(bool $isInverted): void
     {
-        $this->params[AdjustmentParameters::INVERT] = $isInverted === true ? 'true' : 'false';
+        $this->params[Parameters::INVERT] = $isInverted === true ? 'true' : 'false';
     }
 
     /**
@@ -234,7 +237,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetInvert(): void
     {
-        unset($this->params[AdjustmentParameters::INVERT]);
+        unset($this->params[Parameters::INVERT]);
     }
 
     /**
@@ -244,19 +247,19 @@ class Adjustment extends QueryEmitter
      */
     public function getSaturation(): int
     {
-        return $this->params[AdjustmentParameters::SATURATION] ?? 0;
+        return $this->params[Parameters::SATURATION] ?? 0;
     }
 
     /**
      * Saturation.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::SATURATION
+     * @see \hschulz\imgix\Parameters::SATURATION
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setSaturation(int $value): void
     {
-        $this->params[AdjustmentParameters::SATURATION] = $value;
+        $this->params[Parameters::SATURATION] = $value;
     }
 
     /**
@@ -266,7 +269,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetSaturation(): void
     {
-        unset($this->params[AdjustmentParameters::SATURATION]);
+        unset($this->params[Parameters::SATURATION]);
     }
 
     /**
@@ -276,19 +279,19 @@ class Adjustment extends QueryEmitter
      */
     public function getShadow(): int
     {
-        return $this->params[AdjustmentParameters::SHADOW] ?? 0;
+        return $this->params[Parameters::SHADOW] ?? 0;
     }
 
     /**
      * Shadow.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::SHADOW
+     * @see \hschulz\imgix\Parameters::SHADOW
      * @param int $value Valid values are in the range 0 – 100. The default value is 0.
      * @return void
      */
     public function setShadow(int $value): void
     {
-        $this->params[AdjustmentParameters::SHADOW] = $value;
+        $this->params[Parameters::SHADOW] = $value;
     }
 
     /**
@@ -298,7 +301,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetShadow(): void
     {
-        unset($this->params[AdjustmentParameters::SHADOW]);
+        unset($this->params[Parameters::SHADOW]);
     }
 
     /**
@@ -308,19 +311,19 @@ class Adjustment extends QueryEmitter
      */
     public function getSharpen(): int
     {
-        return $this->params[AdjustmentParameters::SHARPEN] ?? 0;
+        return $this->params[Parameters::SHARPEN] ?? 0;
     }
 
     /**
      * Sharpen.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::SHARPEN
+     * @see \hschulz\imgix\Parameters::SHARPEN
      * @param int $value Valid values are in the range 0 – 100. The default value is 0.
      * @return void
      */
     public function setSharpen(int $value): void
     {
-        $this->params[AdjustmentParameters::SHARPEN] = $value;
+        $this->params[Parameters::SHARPEN] = $value;
     }
 
     /**
@@ -330,7 +333,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetSharpen(): void
     {
-        unset($this->params[AdjustmentParameters::SHARPEN]);
+        unset($this->params[Parameters::SHARPEN]);
     }
 
     /**
@@ -340,19 +343,19 @@ class Adjustment extends QueryEmitter
      */
     public function getUnsharpMask(): float
     {
-        return $this->params[AdjustmentParameters::UNSHARP_MASK] ?? 0;
+        return $this->params[Parameters::UNSHARP_MASK] ?? 0;
     }
 
     /**
      * Unsharp mask.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::UNSHARP_MASK
+     * @see \hschulz\imgix\Parameters::UNSHARP_MASK
      * @param int $value Valid values are any floating point number. The default value is 0.
      * @return void
      */
     public function setUnsharpMask(float $value): void
     {
-        $this->params[AdjustmentParameters::UNSHARP_MASK] = $value;
+        $this->params[Parameters::UNSHARP_MASK] = $value;
     }
 
     /**
@@ -362,7 +365,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetUnsharpMask(): void
     {
-        unset($this->params[AdjustmentParameters::UNSHARP_MASK]);
+        unset($this->params[Parameters::UNSHARP_MASK]);
     }
 
     /**
@@ -372,19 +375,19 @@ class Adjustment extends QueryEmitter
      */
     public function getUnsharpMaskRadius(): float
     {
-        return $this->params[AdjustmentParameters::UNSHARP_MASK_RADIUS] ?? 2.5;
+        return $this->params[Parameters::UNSHARP_MASK_RADIUS] ?? 2.5;
     }
 
     /**
      * Unsharp mask radius.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::UNSHARP_MASK_RADIUS
+     * @see \hschulz\imgix\Parameters::UNSHARP_MASK_RADIUS
      * @param int $value Valid values are positive numbers, and the default is 2.5.
      * @return void
      */
     public function setUnsharpMaskRadius(float $value): void
     {
-        $this->params[AdjustmentParameters::UNSHARP_MASK_RADIUS] = $value;
+        $this->params[Parameters::UNSHARP_MASK_RADIUS] = $value;
     }
 
     /**
@@ -394,7 +397,7 @@ class Adjustment extends QueryEmitter
      */
     public function unsetUnsharpMaskRadius(): void
     {
-        unset($this->params[AdjustmentParameters::UNSHARP_MASK_RADIUS]);
+        unset($this->params[Parameters::UNSHARP_MASK_RADIUS]);
     }
 
     /**
@@ -404,19 +407,19 @@ class Adjustment extends QueryEmitter
      */
     public function getVibrance(): int
     {
-        return $this->params[AdjustmentParameters::VIBRANCE] ?? 0;
+        return $this->params[Parameters::VIBRANCE] ?? 0;
     }
 
     /**
      * Vibrance.
      *
-     * @see \hschulz\imgix\AdjustmentParameters::VIBRANCE
+     * @see \hschulz\imgix\Parameters::VIBRANCE
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
     public function setVibrance(int $value): void
     {
-        $this->params[AdjustmentParameters::VIBRANCE] = $value;
+        $this->params[Parameters::VIBRANCE] = $value;
     }
 
     /**
@@ -426,6 +429,6 @@ class Adjustment extends QueryEmitter
      */
     public function unsetVibrance(): void
     {
-        unset($this->params[AdjustmentParameters::VIBRANCE]);
+        unset($this->params[Parameters::VIBRANCE]);
     }
 }

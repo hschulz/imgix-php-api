@@ -3,7 +3,7 @@
 namespace hschulz\imgix\Tests\Unit;
 
 use \hschulz\imgix\Adjustment;
-use \hschulz\imgix\AdjustmentParameters;
+use \hschulz\imgix\Adjustment\Parameters;
 use \PHPUnit\Framework\TestCase;
 
 final class AdjustmentTest extends TestCase
@@ -25,10 +25,10 @@ final class AdjustmentTest extends TestCase
         $subject->setGamma(0);
         $subject->setUnsharpMask(8.99);
 
-        $expected = AdjustmentParameters::HIGHLIGHT . '=-50&'
-                  . AdjustmentParameters::EXPOSURE . '=77&'
-                  . AdjustmentParameters::GAMMA . '=0&'
-                  . AdjustmentParameters::UNSHARP_MASK . '=8.99';
+        $expected = Parameters::HIGHLIGHT . '=-50&'
+                  . Parameters::EXPOSURE . '=77&'
+                  . Parameters::GAMMA . '=0&'
+                  . Parameters::UNSHARP_MASK . '=8.99';
 
         $this->assertEquals($expected, (string) $subject);
     }
@@ -37,11 +37,11 @@ final class AdjustmentTest extends TestCase
     {
         $subject = new Adjustment();
 
-        $params = [AdjustmentParameters::HIGHLIGHT => 66];
+        $params = [Parameters::HIGHLIGHT => 66];
 
         $subject->setParams($params);
 
-        $this->assertArrayHasKey(AdjustmentParameters::HIGHLIGHT, $subject->getParams());
+        $this->assertArrayHasKey(Parameters::HIGHLIGHT, $subject->getParams());
         $this->assertEquals($params, $subject->getParams());
     }
 
@@ -52,7 +52,7 @@ final class AdjustmentTest extends TestCase
         $subject->setBrightness(50);
 
         $this->assertEquals(50, $subject->getBrightness());
-        $this->assertEquals(AdjustmentParameters::BRIGHTNESS . '=50', (string) $subject);
+        $this->assertEquals(Parameters::BRIGHTNESS . '=50', (string) $subject);
     }
 
     public function testCanUnsetBrightness(): void
@@ -72,7 +72,7 @@ final class AdjustmentTest extends TestCase
         $subject->setContrast(50);
 
         $this->assertEquals(50, $subject->getContrast());
-        $this->assertEquals(AdjustmentParameters::CONTRAST . '=50', (string) $subject);
+        $this->assertEquals(Parameters::CONTRAST . '=50', (string) $subject);
     }
 
     public function testCanUnsetContrast(): void
@@ -92,7 +92,7 @@ final class AdjustmentTest extends TestCase
         $subject->setExposure(50);
 
         $this->assertEquals(50, $subject->getExposure());
-        $this->assertEquals(AdjustmentParameters::EXPOSURE . '=50', (string) $subject);
+        $this->assertEquals(Parameters::EXPOSURE . '=50', (string) $subject);
     }
 
     public function testCanUnsetExposure(): void
@@ -112,7 +112,7 @@ final class AdjustmentTest extends TestCase
         $subject->setGamma(50);
 
         $this->assertEquals(50, $subject->getGamma());
-        $this->assertEquals(AdjustmentParameters::GAMMA . '=50', (string) $subject);
+        $this->assertEquals(Parameters::GAMMA . '=50', (string) $subject);
     }
 
     public function testCanUnsetGamma(): void
@@ -132,7 +132,7 @@ final class AdjustmentTest extends TestCase
         $subject->setHighlight(-50);
 
         $this->assertEquals(-50, $subject->getHighlight());
-        $this->assertEquals(AdjustmentParameters::HIGHLIGHT . '=-50', (string) $subject);
+        $this->assertEquals(Parameters::HIGHLIGHT . '=-50', (string) $subject);
     }
 
     public function testCanUnsetHighlight(): void
@@ -152,7 +152,7 @@ final class AdjustmentTest extends TestCase
         $subject->setHueShift(285);
 
         $this->assertEquals(285, $subject->getHueShift());
-        $this->assertEquals(AdjustmentParameters::HUE_SHIFT . '=285', (string) $subject);
+        $this->assertEquals(Parameters::HUE_SHIFT . '=285', (string) $subject);
     }
 
     public function testCanUnsetHueShift(): void
@@ -172,7 +172,7 @@ final class AdjustmentTest extends TestCase
         $subject->setInvert(false);
 
         $this->assertFalse($subject->getInvert());
-        $this->assertEquals(AdjustmentParameters::INVERT . '=false', (string) $subject);
+        $this->assertEquals(Parameters::INVERT . '=false', (string) $subject);
     }
 
     public function testCanSetInvertTrue(): void
@@ -182,7 +182,7 @@ final class AdjustmentTest extends TestCase
         $subject->setInvert(true);
 
         $this->assertTrue($subject->getInvert());
-        $this->assertEquals(AdjustmentParameters::INVERT . '=true', (string) $subject);
+        $this->assertEquals(Parameters::INVERT . '=true', (string) $subject);
     }
 
     public function testGetInvertDefaultValue(): void
@@ -210,7 +210,7 @@ final class AdjustmentTest extends TestCase
         $subject->setSaturation(50);
 
         $this->assertEquals(50, $subject->getSaturation());
-        $this->assertEquals(AdjustmentParameters::SATURATION . '=50', (string) $subject);
+        $this->assertEquals(Parameters::SATURATION . '=50', (string) $subject);
     }
 
     public function testCanUnsetSaturation(): void
@@ -230,7 +230,7 @@ final class AdjustmentTest extends TestCase
         $subject->setShadow(50);
 
         $this->assertEquals(50, $subject->getShadow());
-        $this->assertEquals(AdjustmentParameters::SHADOW . '=50', (string) $subject);
+        $this->assertEquals(Parameters::SHADOW . '=50', (string) $subject);
     }
 
     public function testCanUnsetShadow(): void
@@ -250,7 +250,7 @@ final class AdjustmentTest extends TestCase
         $subject->setSharpen(50);
 
         $this->assertEquals(50, $subject->getSharpen());
-        $this->assertEquals(AdjustmentParameters::SHARPEN . '=50', (string) $subject);
+        $this->assertEquals(Parameters::SHARPEN . '=50', (string) $subject);
     }
 
     public function testCanUnsetSharpen(): void
@@ -270,7 +270,7 @@ final class AdjustmentTest extends TestCase
         $subject->setUnsharpMask(3.1415);
 
         $this->assertEquals(3.1415, $subject->getUnsharpMask());
-        $this->assertEquals(AdjustmentParameters::UNSHARP_MASK . '=3.1415', (string) $subject);
+        $this->assertEquals(Parameters::UNSHARP_MASK . '=3.1415', (string) $subject);
     }
 
     public function testCanUnsetUnsharpMask(): void
@@ -290,7 +290,7 @@ final class AdjustmentTest extends TestCase
         $subject->setUnsharpMaskRadius(3.1415);
 
         $this->assertEquals(3.1415, $subject->getUnsharpMaskRadius());
-        $this->assertEquals(AdjustmentParameters::UNSHARP_MASK_RADIUS . '=3.1415', (string) $subject);
+        $this->assertEquals(Parameters::UNSHARP_MASK_RADIUS . '=3.1415', (string) $subject);
     }
 
     public function testCanUnsetUnsharpMaskRadius(): void
@@ -310,7 +310,7 @@ final class AdjustmentTest extends TestCase
         $subject->setVibrance(50);
 
         $this->assertEquals(50, $subject->getVibrance());
-        $this->assertEquals(AdjustmentParameters::VIBRANCE . '=50', (string) $subject);
+        $this->assertEquals(Parameters::VIBRANCE . '=50', (string) $subject);
     }
 
     public function testCanUnsetVibrance(): void
