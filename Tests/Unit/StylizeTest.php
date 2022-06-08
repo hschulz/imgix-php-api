@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\Stylize;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\Stylize;
 use \PHPUnit\Framework\TestCase;
 
 /**

@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\ResizeFitMode;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\ResizeFitMode;
 use \PHPUnit\Framework\TestCase;
 
 /**

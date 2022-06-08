@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Crop mode controls how the image is aligned when fit=crop is set.
@@ -12,47 +14,47 @@ class CropMode extends QueryEmitter
     /**
      * @var string
      */
-    const PARAM_NAME = 'crop';
+    public const PARAM_NAME = 'crop';
 
     /**
      * @var string
      */
-    const VALUE_TOP = 'top';
+    public const VALUE_TOP = 'top';
 
     /**
      * @var string
      */
-    const VALUE_BOTTOM = 'bottom';
+    public const VALUE_BOTTOM = 'bottom';
 
     /**
      * @var string
      */
-    const VALUE_LEFT = 'left';
+    public const VALUE_LEFT = 'left';
 
     /**
      * @var string
      */
-    const VALUE_RIGHT = 'right';
+    public const VALUE_RIGHT = 'right';
 
     /**
      * @var string
      */
-    const VALUE_FACES = 'faces';
+    public const VALUE_FACES = 'faces';
 
     /**
      * @var string
      */
-    const VALUE_FOCALPOINT = 'focalpoint';
+    public const VALUE_FOCALPOINT = 'focalpoint';
 
     /**
      * @var string
      */
-    const VALUE_EDGES = 'edges';
+    public const VALUE_EDGES = 'edges';
 
     /**
      * @var string
      */
-    const VALUE_ENTROPY = 'entropy';
+    public const VALUE_ENTROPY = 'entropy';
 
     /**
      * Returns the query string containing all enabled features.

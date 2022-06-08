@@ -1,9 +1,11 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
 
-use function \array_search;
-use function \implode;
+namespace Hschulz\Imgix;
+
+use function array_search;
+use function implode;
 
 /**
  *
@@ -15,14 +17,14 @@ class UriBuilder
      *
      * @var string
      */
-    protected $url = '';
+    protected string $url = '';
 
     /**
      * Stores the added query string objects.
      *
      * @var array
      */
-    protected $parts = [];
+    protected array $parts = [];
 
     /**
      * Creates a new query builder for the given imgix url.

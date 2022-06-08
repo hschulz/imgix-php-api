@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * The rotation parameters allow you to change the orientation of your image,
@@ -12,37 +14,37 @@ class Rotation extends QueryEmitter
      * Name of the flip parameter.
      * @var string
      */
-    const PARAM_FLIP = 'flip';
+    public const PARAM_FLIP = 'flip';
 
     /**
      * Value indicating a horizontal flip.
      * @var string
      */
-    const VALUE_FLIP_HORIZONTAL = 'h';
+    public const VALUE_FLIP_HORIZONTAL = 'h';
 
     /**
      * Value indicating a vertical flip.
      * @var string
      */
-    const VALUE_FLIP_VERTICAL = 'v';
+    public const VALUE_FLIP_VERTICAL = 'v';
 
     /**
      * Value indicating a horizontal and vertical flip.
      * @var string
      */
-    const VALUE_FLIP_BOTH = 'hv';
+    public const VALUE_FLIP_BOTH = 'hv';
 
     /**
      * Name of the orientation parameter.
      * @var string
      */
-    const PARAM_ORIENTATION = 'or';
+    public const PARAM_ORIENTATION = 'or';
 
     /**
      * Name of the rotation parameter.
      * @var string
      */
-    const PARAM_ROTATION = 'rot';
+    public const PARAM_ROTATION = 'rot';
 
     /**
      * Returns the set flip value or an empty string.

@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * These parameters modify fit=facearea mode when sizing an image to zoom in and
@@ -12,17 +14,17 @@ class FaceDetection extends QueryEmitter
     /**
      * @var string
      */
-    const PARAM_FACE_INDEX = 'faceindex';
+    public const PARAM_FACE_INDEX = 'faceindex';
 
     /**
      * @var string
      */
-    const PARAM_FACE_PADDING = 'facepad';
+    public const PARAM_FACE_PADDING = 'facepad';
 
     /**
      * @var string
      */
-    const PARAM_FACES = 'faces';
+    public const PARAM_FACES = 'faces';
 
     /**
      * Returns the set value for face index or the default value.

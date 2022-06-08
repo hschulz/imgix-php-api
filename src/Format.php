@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix;
+
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * This set of parameters gives you control over the output properties of your
@@ -14,31 +16,31 @@ class Format extends QueryEmitter
      * Name of the color quantization parameter.
      * @var string
      */
-    const PARAM_COLOR_QUANTIZATION = 'colorquant';
+    public const PARAM_COLOR_QUANTIZATION = 'colorquant';
 
     /**
      * Name of the dpi parameter.
      * @var string
      */
-    const PARAM_DPI = 'dpi';
+    public const PARAM_DPI = 'dpi';
 
     /**
      * Name of the download parameter.
      * @var string
      */
-    const PARAM_DOWNLOAD = 'dl';
+    public const PARAM_DOWNLOAD = 'dl';
 
     /**
      * Name of the lossless parameter.
      * @var string
      */
-    const PARAM_LOSSLESS = 'lossless';
+    public const PARAM_LOSSLESS = 'lossless';
 
     /**
      * Name of the quality parameter.
      * @var string
      */
-    const PARAM_QUALITY = 'q';
+    public const PARAM_QUALITY = 'q';
 
     /**
      * Returns the set color quantization value or the default value.
@@ -176,7 +178,7 @@ class Format extends QueryEmitter
      */
     public function isLossless(): bool
     {
-        return $this->params[self::PARAM_LOSSLESS] ?? false;
+        return isset($this->params[self::PARAM_LOSSLESS]);
     }
 
     /**

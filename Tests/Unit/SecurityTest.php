@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\Security;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\Security;
 use \PHPUnit\Framework\TestCase;
 
 /**

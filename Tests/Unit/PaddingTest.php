@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\Padding;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\Padding;
 use \PHPUnit\Framework\TestCase;
 
 /**

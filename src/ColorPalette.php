@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Extracts a color palette from your image, which you can use to dynamically
@@ -14,27 +16,27 @@ class ColorPalette extends QueryEmitter
     /**
      * @var string
      */
-    const PARAM_CSS_PREFIX = 'prefix';
+    public const PARAM_CSS_PREFIX = 'prefix';
 
     /**
      * @var string
      */
-    const PARAM_COLOR_PALETTE_EXTRATCTION = 'palette';
+    public const PARAM_COLOR_PALETTE_EXTRATCTION = 'palette';
 
     /**
      * @var string
      */
-    const VALUE_PALETTE_CSS = 'css';
+    public const VALUE_PALETTE_CSS = 'css';
 
     /**
      * @var string
      */
-    const VALUE_PALETTE_JSON = 'json';
+    public const VALUE_PALETTE_JSON = 'json';
 
     /**
      * @var string
      */
-    const PARAM_PALETTE_COLOR_COUNT = 'colors';
+    public const PARAM_PALETTE_COLOR_COUNT = 'colors';
 
     /**
      *

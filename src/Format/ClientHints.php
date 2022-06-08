@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Format;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix\Format;
+
+use Hschulz\Imgix\QueryEmitter;
 use function \array_search;
 
 /**
@@ -20,25 +22,25 @@ class ClientHints extends QueryEmitter
      * Name of the client hint parameter.
      * @var string
      */
-    const PARAM_NAME = 'ch';
+    public const PARAM_NAME = 'ch';
 
     /**
      * Value for the client hint width setting.
      * @var string
      */
-    const VALUE_WIDTH = 'Width';
+    public const VALUE_WIDTH = 'Width';
 
     /**
      * Value for the client hint dpr setting.
      * @var string
      */
-    const VALUE_DPR = 'DPR';
+    public const VALUE_DPR = 'DPR';
 
     /**
      * Name for the client hint save-data setting.
      * @var string
      */
-    const VALUE_SAVE_DATA = 'Save-Data';
+    public const VALUE_SAVE_DATA = 'Save-Data';
 
     /**
      * Returns the query string containing all enabled features.

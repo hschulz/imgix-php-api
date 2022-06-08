@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\Size;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\Size;
 use \PHPUnit\Framework\TestCase;
 
 /**

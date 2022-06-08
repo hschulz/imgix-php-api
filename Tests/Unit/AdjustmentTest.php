@@ -1,9 +1,11 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\Adjustment;
-use \hschulz\imgix\Adjustment\Parameters;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\Adjustment;
+use Hschulz\Imgix\Adjustment\Parameters;
 use \PHPUnit\Framework\TestCase;
 
 final class AdjustmentTest extends TestCase

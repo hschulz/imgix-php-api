@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Contains all methods to build a http query string from the set parameters.
@@ -12,7 +14,7 @@ abstract class QueryEmitter
      *
      * @var array
      */
-    protected $params = [];
+    protected array $params = [];
 
     /**
      * Initialize the empty object with empty parameters.

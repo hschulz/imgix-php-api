@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Format;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix\Format;
+
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * The output format to convert the image to.
@@ -15,73 +17,73 @@ class OutputFormat extends QueryEmitter
      * Name for the format parameter.
      * @var string
      */
-    const PARAM_NAME = 'fm';
+    public const PARAM_NAME = 'fm';
 
     /**
      * Value for gif format.
      * @var string
      */
-    const VALUE_GIF = 'gif';
+    public const VALUE_GIF = 'gif';
 
     /**
      * Value for jp2 format.
      * @var string
      */
-    const VALUE_JP2 = 'jp2';
+    public const VALUE_JP2 = 'jp2';
 
     /**
      * Value for jpg format.
      * @var string
      */
-    const VALUE_JPG = 'jpg';
+    public const VALUE_JPG = 'jpg';
 
     /**
      * Value for json format.
      * @var string
      */
-    const VALUE_JSON = 'json';
+    public const VALUE_JSON = 'json';
 
     /**
      * Value for jxr format.
      * @var string
      */
-    const VALUE_JXR = 'jxr';
+    public const VALUE_JXR = 'jxr';
 
     /**
      * Value for pjpg format.
      * @var string
      */
-    const VALUE_PJPG = 'pjpg';
+    public const VALUE_PJPG = 'pjpg';
 
     /**
      * Value for mp4 format.
      * @var string
      */
-    const VALUE_MP4 = 'mp4';
+    public const VALUE_MP4 = 'mp4';
 
     /**
      * Value for png format.
      * @var string
      */
-    const VALUE_PNG = 'png';
+    public const VALUE_PNG = 'png';
 
     /**
      * Value for png8 format.
      * @var string
      */
-    const VALUE_PNG8 = 'png8';
+    public const VALUE_PNG8 = 'png8';
 
     /**
      * Value for png32 format.
      * @var string
      */
-    const VALUE_PNG32 = 'png32';
+    public const VALUE_PNG32 = 'png32';
 
     /**
      * Value for webm format.
      * @var string
      */
-    const VALUE_WEBM = 'webm';
+    public const VALUE_WEBM = 'webm';
 
     /**
      * Returns the set parameter value.

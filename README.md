@@ -75,4 +75,3 @@ See also the list of [contributors](https://github.com/hschulz/imgix-php-api/con
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/hschulz/imgix-php-api/blob/master/LICENSE) file for details
-```

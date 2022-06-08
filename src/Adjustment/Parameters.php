@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix\Adjustment;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix\Adjustment;
 
 /**
  * This interface contains all http query parameters available
@@ -13,35 +15,35 @@ interface Parameters
      * Valid values are in the range -100 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const BRIGHTNESS = 'bri';
+    public const BRIGHTNESS = 'bri';
 
     /**
      * Adjusts the contrast of the image.
      * Valid values are in the range -100 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const CONTRAST = 'con';
+    public const CONTRAST = 'con';
 
     /**
      * Adjusts the exposure setting for an image, similar to changing the F-stop on a camera.
      * Valid values are in the range -100 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const EXPOSURE = 'exp';
+    public const EXPOSURE = 'exp';
 
     /**
      * Adjusts gamma and midtone brightness.
      * Valid values are in the range -100 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const GAMMA = 'gam';
+    public const GAMMA = 'gam';
 
     /**
      * Adjusts the highlight tonal mapping of an image while preserving detail in highlighted areas.
      * Valid values are in the range -100 – 0. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const HIGHLIGHT = 'high';
+    public const HIGHLIGHT = 'high';
 
     /**
      * Changes the hue, or tint, of each pixel in the image.
@@ -49,14 +51,14 @@ interface Parameters
      * Valid values are in the range 0 – 359. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const HUE_SHIFT = 'hue';
+    public const HUE_SHIFT = 'hue';
 
     /**
      * Inverts all pixel colors and brightness values within the image, producing a negative of the image.
      * Valid values are 0/false and 1/true.
      * @var string
      */
-    const INVERT = 'invert';
+    public const INVERT = 'invert';
 
     /**
      * Adjusts the saturation of the image.
@@ -64,14 +66,14 @@ interface Parameters
      * A value of -100 will convert the image to grayscale.
      * @var string
      */
-    const SATURATION = 'sat';
+    public const SATURATION = 'sat';
 
     /**
      * Adjusts the shadow tonal mapping of an image while preserving detail in shadowed areas.
      * Valid values are in the range 0 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const SHADOW = 'shad';
+    public const SHADOW = 'shad';
 
     /**
      * Sharpens the image using luminance (which only affects the black and white values),
@@ -79,7 +81,7 @@ interface Parameters
      * Valid values are in the range 0 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const SHARPEN = 'sharp';
+    public const SHARPEN = 'sharp';
 
     /**
      * Sharpens the image details using an unsharp mask (a blurred, inverted copy of the image).
@@ -89,7 +91,7 @@ interface Parameters
      * Unsharp mask and radius are better for thumbnails and fine-tuned sharpening.
      * @var string
      */
-    const UNSHARP_MASK = 'usm';
+    public const UNSHARP_MASK = 'usm';
 
     /**
      * Determines how many pixels should be included to enhance the contrast when using the unsharp mask parameter.
@@ -99,12 +101,12 @@ interface Parameters
      * Unsharp mask and radius are better for thumbnails and fine-tuned sharpening.
      * @var string
      */
-    const UNSHARP_MASK_RADIUS = 'usmrad';
+    public const UNSHARP_MASK_RADIUS = 'usmrad';
 
     /**
      * Adjusts the color saturation of an image while keeping pleasing skin tones.
      * Valid values are in the range -100 – 100. The default value is 0, which leaves the image unchanged.
      * @var string
      */
-    const VIBRANCE = 'vib';
+    public const VIBRANCE = 'vib';
 }

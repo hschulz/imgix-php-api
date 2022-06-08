@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Outputs individual pages or vector assets from PDF or
@@ -16,7 +18,7 @@ class Pdf extends QueryEmitter
      * Name of the pdf argument.
      * @var string
      */
-    const PARAM_NAME = 'page';
+    public const PARAM_NAME = 'page';
 
     /**
      * Returns the set page value or the default value.

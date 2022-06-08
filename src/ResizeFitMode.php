@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * The fit parameter controls how the output image is fit to its target
@@ -8,25 +10,25 @@ namespace hschulz\imgix;
  */
 class ResizeFitMode extends QueryEmitter
 {
-    const PARAM_NAME = 'fit';
+    public const PARAM_NAME = 'fit';
 
-    const VALUE_CLAMP = 'clamp';
+    public const VALUE_CLAMP = 'clamp';
 
-    const VALUE_CLIP = 'clip';
+    public const VALUE_CLIP = 'clip';
 
-    const VALUE_CROP = 'crop';
+    public const VALUE_CROP = 'crop';
 
-    const VALUE_FACEAREA = 'facearea';
+    public const VALUE_FACEAREA = 'facearea';
 
-    const VALUE_FILL = 'fill';
+    public const VALUE_FILL = 'fill';
 
-    const VALUE_FILLMAX = 'fillmax';
+    public const VALUE_FILLMAX = 'fillmax';
 
-    const VALUE_MAX = 'max';
+    public const VALUE_MAX = 'max';
 
-    const VALUE_MIN = 'min';
+    public const VALUE_MIN = 'min';
 
-    const VALUE_SCALE = 'scale';
+    public const VALUE_SCALE = 'scale';
 
     protected $value = '';
 

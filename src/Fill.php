@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix;
+
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * Fill parameters describe how blank or partially transparent pixels
@@ -14,31 +16,31 @@ class Fill extends QueryEmitter
      * Name of the background color parameter.
      * @var string
      */
-    const PARAM_BACKGROUND_COLOR = 'bg';
+    public const PARAM_BACKGROUND_COLOR = 'bg';
 
     /**
      * Name of the fill color parameter.
      * @var string
      */
-    const PARAM_FILL_COLOR = 'fill-color';
+    public const PARAM_FILL_COLOR = 'fill-color';
 
     /**
      * Name of the fill mode parameter.
      * @var string
      */
-    const PARAM_FILL_MODE = '';
+    public const PARAM_FILL_MODE = '';
 
     /**
      * Value for the solid fill mode.
      * @var string
      */
-    const VALUE_FILL_SOLID = 'solid';
+    public const VALUE_FILL_SOLID = 'solid';
 
     /**
      * Value for the blur fill mode.
      * @var string
      */
-    const VALUE_FILL_BLUR = 'blur';
+    public const VALUE_FILL_BLUR = 'blur';
 
     /**
      * Returns the set background color value or the default value.

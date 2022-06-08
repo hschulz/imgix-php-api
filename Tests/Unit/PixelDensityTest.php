@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\PixelDensity;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\PixelDensity;
 use \PHPUnit\Framework\TestCase;
 
 /**

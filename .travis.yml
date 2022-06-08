@@ -1,19 +1,27 @@
 language: php
 
+os: linux
+dist: focal
+
 php:
-    - 7.1
-    - 7.2
-    - 7.3
+    - 7.4
+    - 8.0
+    - 8.1
+
+env:
+    global:
+        - XDEBUG_MODE=coverage
+
 
 notifications:
     email:
         on_success: never
 
 before_script:
-    - travis_retry composer self-update
-    - travis_retry composer install
+    - composer self-update --no-progress --quiet --no-interaction
+    - composer update --no-progress --quiet --no-interaction
 
 script:
-    - vendor/bin/phpunit --bootstrap=vendor/autoload.php --whitelist=src/ --coverage-clover=coverage.xml Tests/
+    - composer run test
 
 after_success: bash <(curl -s https://codecov.io/bash)

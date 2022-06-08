@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Add padding to your image.
@@ -11,7 +13,7 @@ class Padding extends QueryEmitter
      * Name of the padding parameter.
      * @var string
      */
-    const PARAM_NAME = 'padding';
+    public const PARAM_NAME = 'padding';
 
     /**
      * Returns the set padding value or the default value.

@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Format;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix\Format;
+
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * The chromasub parameter controls the chroma subsampling rate for JPEG and
@@ -16,25 +18,25 @@ class ChromaSubsampling extends QueryEmitter
      * Name of the chroma subsampling parameter.
      * @var string
      */
-    const PARAM_NAME = 'chromasub';
+    public const PARAM_NAME = 'chromasub';
 
     /**
      * Default value for 4:2:0 sampling.
      * @var int
      */
-    const VALUE_420 = 420;
+    public const VALUE_420 = 420;
 
     /**
      * Value for 4:2:2 sampling.
      * @var int
      */
-    const VALUE_422 = 422;
+    public const VALUE_422 = 422;
 
     /**
      * Value for 4:4:4 sampling.
      * @var int
      */
-    const VALUE_444 = 444;
+    public const VALUE_444 = 444;
 
     /**
      * Sets the chroma subsampling ratio to 4:2:0 which is the default value.

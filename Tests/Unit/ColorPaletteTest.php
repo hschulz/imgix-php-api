@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\ColorPalette;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\ColorPalette;
 use \PHPUnit\Framework\TestCase;
 
 final class ColorPaletteTest extends TestCase

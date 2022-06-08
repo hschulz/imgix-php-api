@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit\Format;
+declare(strict_types=1);
 
-use \hschulz\imgix\Format\ClientHints;
+namespace Hschulz\Imgix\Tests\Unit\Format;
+
+use Hschulz\Imgix\Format\ClientHints;
 use \PHPUnit\Framework\TestCase;
 
 /**

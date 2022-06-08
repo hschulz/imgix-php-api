@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * The size parameters allow you to control the image dimensions.
@@ -11,37 +13,37 @@ class Size extends QueryEmitter
      * Name of the width parameter.
      * @var string
      */
-    const PARAM_WIDTH = 'w';
+    public const PARAM_WIDTH = 'w';
 
     /**
      * Name of the minimum width parameter.
      * @var string
      */
-    const PARAM_WIDTH_MIN = 'min-w';
+    public const PARAM_WIDTH_MIN = 'min-w';
 
     /**
      * Name of the maximum width parameter.
      * @var string
      */
-    const PARAM_WIDTH_MAX = 'max-w';
+    public const PARAM_WIDTH_MAX = 'max-w';
 
     /**
      * Name of the height parameter.
      * @var string
      */
-    const PARAM_HEIGHT = 'h';
+    public const PARAM_HEIGHT = 'h';
 
     /**
      * Name of the minimum height parameter.
      * @var string
      */
-    const PARAM_HEIGHT_MIN = 'min-h';
+    public const PARAM_HEIGHT_MIN = 'min-h';
 
     /**
      * Name of the maximum height parameter.
      * @var string
      */
-    const PARAM_HEIGHT_MAX = 'max-h';
+    public const PARAM_HEIGHT_MAX = 'max-h';
 
     /**
      * Returns the set width value or the default value.

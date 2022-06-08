@@ -1,9 +1,11 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
 
-use \hschulz\imgix\Adjustment\Parameters;
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix;
+
+use Hschulz\Imgix\Adjustment\Parameters;
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * Adjustment class
@@ -23,7 +25,7 @@ class Adjustment extends QueryEmitter
     /**
      * Brightness.
      *
-     * @see \hschulz\imgix\Parameters::BRIGHTNESS
+     * @see Hschulz\Imgix\Parameters::BRIGHTNESS
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
@@ -55,7 +57,7 @@ class Adjustment extends QueryEmitter
     /**
      * Contrast.
      *
-     * @see \hschulz\imgix\Parameters::CONTRAST
+     * @see Hschulz\Imgix\Parameters::CONTRAST
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
@@ -87,7 +89,7 @@ class Adjustment extends QueryEmitter
     /**
      * Exposure.
      *
-     * @see \hschulz\imgix\Parameters::EXPOSURE
+     * @see Hschulz\Imgix\Parameters::EXPOSURE
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
@@ -119,7 +121,7 @@ class Adjustment extends QueryEmitter
     /**
      * Gamma.
      *
-     * @see \hschulz\imgix\Parameters::GAMMA
+     * @see Hschulz\Imgix\Parameters::GAMMA
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
@@ -151,7 +153,7 @@ class Adjustment extends QueryEmitter
     /**
      * Highlight.
      *
-     * @see \hschulz\imgix\Parameters::HIGHLIGHT
+     * @see Hschulz\Imgix\Parameters::HIGHLIGHT
      * @param int $value Valid values are in the range -100 - 0. The default value is 0.
      * @return void
      */
@@ -183,7 +185,7 @@ class Adjustment extends QueryEmitter
     /**
      * Hue shift.
      *
-     * @see \hschulz\imgix\Parameters::HUE_SHIFT
+     * @see Hschulz\Imgix\Parameters::HUE_SHIFT
      * @param int $value Valid values are in the range 0 – 359. The default value is 0.
      * @return void
      */
@@ -221,7 +223,7 @@ class Adjustment extends QueryEmitter
     /**
      * Invert.
      *
-     * @see \hschulz\imgix\Parameters::INVERT
+     * @see Hschulz\Imgix\Parameters::INVERT
      * @param bool $isInverted
      * @return void
      */
@@ -253,7 +255,7 @@ class Adjustment extends QueryEmitter
     /**
      * Saturation.
      *
-     * @see \hschulz\imgix\Parameters::SATURATION
+     * @see Hschulz\Imgix\Parameters::SATURATION
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */
@@ -285,7 +287,7 @@ class Adjustment extends QueryEmitter
     /**
      * Shadow.
      *
-     * @see \hschulz\imgix\Parameters::SHADOW
+     * @see Hschulz\Imgix\Parameters::SHADOW
      * @param int $value Valid values are in the range 0 – 100. The default value is 0.
      * @return void
      */
@@ -317,7 +319,7 @@ class Adjustment extends QueryEmitter
     /**
      * Sharpen.
      *
-     * @see \hschulz\imgix\Parameters::SHARPEN
+     * @see Hschulz\Imgix\Parameters::SHARPEN
      * @param int $value Valid values are in the range 0 – 100. The default value is 0.
      * @return void
      */
@@ -349,7 +351,7 @@ class Adjustment extends QueryEmitter
     /**
      * Unsharp mask.
      *
-     * @see \hschulz\imgix\Parameters::UNSHARP_MASK
+     * @see Hschulz\Imgix\Parameters::UNSHARP_MASK
      * @param int $value Valid values are any floating point number. The default value is 0.
      * @return void
      */
@@ -381,7 +383,7 @@ class Adjustment extends QueryEmitter
     /**
      * Unsharp mask radius.
      *
-     * @see \hschulz\imgix\Parameters::UNSHARP_MASK_RADIUS
+     * @see Hschulz\Imgix\Parameters::UNSHARP_MASK_RADIUS
      * @param int $value Valid values are positive numbers, and the default is 2.5.
      * @return void
      */
@@ -413,7 +415,7 @@ class Adjustment extends QueryEmitter
     /**
      * Vibrance.
      *
-     * @see \hschulz\imgix\Parameters::VIBRANCE
+     * @see Hschulz\Imgix\Parameters::VIBRANCE
      * @param int $value Valid values are in the range -100 – 100. The default value is 0.
      * @return void
      */

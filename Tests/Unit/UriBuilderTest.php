@@ -1,10 +1,12 @@
 <?php
 
-namespace hschulz\imgix\Tests\Unit;
+declare(strict_types=1);
 
-use \hschulz\imgix\FocalPointCrop;
-use \hschulz\imgix\Size;
-use \hschulz\imgix\UriBuilder;
+namespace Hschulz\Imgix\Tests\Unit;
+
+use Hschulz\Imgix\FocalPointCrop;
+use Hschulz\Imgix\Size;
+use Hschulz\Imgix\UriBuilder;
 use \PHPUnit\Framework\TestCase;
 
 /**

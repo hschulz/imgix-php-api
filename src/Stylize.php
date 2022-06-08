@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * The stylize parameters allow you to apply basic artistic effects
@@ -11,27 +13,27 @@ class Stylize extends QueryEmitter
     /**
      * @var string
      */
-    const PARAM_BLUR = 'blur';
+    public const PARAM_BLUR = 'blur';
 
     /**
      * @var string
      */
-    const PARAM_HALFTONE = 'htn';
+    public const PARAM_HALFTONE = 'htn';
 
     /**
      * @var string
      */
-    const PARAM_MONOCHROME = 'mono';
+    public const PARAM_MONOCHROME = 'mono';
 
     /**
      * @var string
      */
-    const PARAM_PIXELLATE = 'px';
+    public const PARAM_PIXELLATE = 'px';
 
     /**
      * @var string
      */
-    const PARAM_SEPIA = 'sepia';
+    public const PARAM_SEPIA = 'sepia';
 
     /**
      * Returns the set blur value or the default value.

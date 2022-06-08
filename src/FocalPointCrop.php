@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Focal point cropping gives you the ability to choose and fine-tune the point
@@ -22,26 +24,26 @@ class FocalPointCrop extends QueryEmitter
      * Name of the focalpoint x coordinate.
      * @var string
      */
-    const PARAMETER_FPX = 'fp-x';
+    public const PARAMETER_FPX = 'fp-x';
 
     /**
      * Name of the focalpoint y coordinate.
      * @var string
      */
-    const PARAMETER_FPY = 'fp-y';
+    public const PARAMETER_FPY = 'fp-y';
 
     /**
      * Name of the focalpoint zoom value.
      * @var string
      */
-    const PARAMETER_FPZ = 'fp-z';
+    public const PARAMETER_FPZ = 'fp-z';
 
     /**
      * When set to true, this places a crosshair overlay on the image
      * that identifies where the focal point of the image is set.
      * @var string
      */
-    const PARAMETER_DEBUG = 'fp-debug';
+    public const PARAMETER_DEBUG = 'fp-debug';
 
     /**
      * Returns the set x coordinate or the default value.

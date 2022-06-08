@@ -1,8 +1,10 @@
 <?php
 
-namespace hschulz\imgix\Format;
+declare(strict_types=1);
 
-use \hschulz\imgix\QueryEmitter;
+namespace Hschulz\Imgix\Format;
+
+use Hschulz\Imgix\QueryEmitter;
 
 /**
  * Description of ColorSpace
@@ -13,31 +15,31 @@ class ColorSpace extends QueryEmitter
      * Name of the color space parameter.
      * @var string
      */
-    const PARAM_NAME = 'cs';
+    public const PARAM_NAME = 'cs';
 
     /**
      * Value for SRGB color space.
      * @var string
      */
-    const VALUE_SRGB = 'srgb';
+    public const VALUE_SRGB = 'srgb';
 
     /**
      * Value for Adobe RGB 1998 color space.
      * @var string
      */
-    const VALUE_ADOBERGB1998 = 'adobergb1998';
+    public const VALUE_ADOBERGB1998 = 'adobergb1998';
 
     /**
      * Value for Tiny SRGB color space.
      * @var string
      */
-    const VALUE_TINYSRGB = 'tinysrgb';
+    public const VALUE_TINYSRGB = 'tinysrgb';
 
     /**
      * Value for stripping the color space.
      * @var string
      */
-    const VALUE_STRIP = 'strip';
+    public const VALUE_STRIP = 'strip';
 
     /**
      * Returns the set parameter value.

@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 use function \array_search;
 use function \count;
@@ -13,7 +15,7 @@ class Automatic extends QueryEmitter
      * across your entire image catalog.
      * @var string
      */
-    const PARAMETER_NAME = 'auto';
+    public const PARAMETER_NAME = 'auto';
 
     /**
      * When auto=compress is set, imgix will apply best-effort techniques
@@ -26,7 +28,7 @@ class Automatic extends QueryEmitter
      * The quality standard (q) is set to 45.
      * @var string
      */
-    const VALUE_COMPRESSION = 'compress';
+    public const VALUE_COMPRESSION = 'compress';
 
     /**
      * When auto=enhance is set, the image is adjusted using the distribution
@@ -35,7 +37,7 @@ class Automatic extends QueryEmitter
      * vibrant appearance.
      * @var string
      */
-    const VALUE_ENHANCE = 'enhance';
+    public const VALUE_ENHANCE = 'enhance';
 
     /**
      * When auto=format is set, imgix determines whether the image can be
@@ -46,21 +48,21 @@ class Automatic extends QueryEmitter
      * correctly cached.
      * @var string
      */
-    const VALUE_FORMAT = 'format';
+    public const VALUE_FORMAT = 'format';
 
     /**
      * When auto=redeye is set, red-eye removal is applied to any
      * detected faces.
      * @var string
      */
-    const VALUE_REDEYE = 'redeye';
+    public const VALUE_REDEYE = 'redeye';
 
     /**
      * Used to store the raw representation of the query parameter key value pairs.
      *
      * @var array
      */
-    protected $params = [];
+    protected array $params = [];
 
     /**
      * Creates a new automatic optimization with no features enabled.

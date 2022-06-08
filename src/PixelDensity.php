@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Controls the output density of your image, so you can serve images at the
@@ -21,7 +23,7 @@ class PixelDensity extends QueryEmitter
      * Name of the pixel density parameter.
      * @var string
      */
-    const PARAM_NAME = 'dpr';
+    public const PARAM_NAME = 'dpr';
 
     /**
      * Returns the set device pixel ratio value or the default value.

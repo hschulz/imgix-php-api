@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\imgix;
+declare(strict_types=1);
+
+namespace Hschulz\Imgix;
 
 /**
  * Securing URLs adds a layer of security to your images, by blocking anyone
@@ -14,13 +16,13 @@ class Security extends QueryEmitter
      * Name of the signing key parameter.
      * @var string
      */
-    const PARAM_SIGNING_KEY = 's';
+    public const PARAM_SIGNING_KEY = 's';
 
     /**
      * Name of the expires parameter.
      * @var string
      */
-    const PARAM_EXPIRES = 'expires';
+    public const PARAM_EXPIRES = 'expires';
 
     /**
      * Returns the set signing key or the default value.
