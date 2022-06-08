@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Hschulz\Imgix;
 
-use Hschulz\Imgix\QueryEmitter;
-
 /**
  * This set of parameters gives you control over the output properties of your
  * image across several aspects.

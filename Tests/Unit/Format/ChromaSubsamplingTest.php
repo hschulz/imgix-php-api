@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Hschulz\Imgix\Tests\Unit\Format;
 
 use Hschulz\Imgix\Format\ChromaSubsampling;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of ChromaSubsamplingTest

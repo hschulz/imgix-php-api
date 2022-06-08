@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Hschulz\Imgix;
 
 use Hschulz\Imgix\Adjustment\Parameters;
-use Hschulz\Imgix\QueryEmitter;
 
 /**
  * Adjustment class

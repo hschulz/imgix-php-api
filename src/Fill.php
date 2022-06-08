@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Hschulz\Imgix;
 
-use Hschulz\Imgix\QueryEmitter;
-
 /**
  * Fill parameters describe how blank or partially transparent pixels
  * in an image will be filled.

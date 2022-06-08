@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Hschulz\Imgix\Tests\Unit;
 
 use Hschulz\Imgix\Fill;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of FillTest

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Hschulz\Imgix\Format;
 
+use function array_search;
 use Hschulz\Imgix\QueryEmitter;
-use function \array_search;
 
 /**
  * Note: ch cannot be set as a Source's default parameter,

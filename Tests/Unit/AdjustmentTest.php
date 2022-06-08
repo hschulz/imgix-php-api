@@ -6,7 +6,7 @@ namespace Hschulz\Imgix\Tests\Unit;
 
 use Hschulz\Imgix\Adjustment;
 use Hschulz\Imgix\Adjustment\Parameters;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 final class AdjustmentTest extends TestCase
 {

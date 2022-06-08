@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Hschulz\Imgix;
 
-use function \array_search;
-use function \count;
-use function \implode;
+use function array_search;
+use function count;
+use function implode;
 
 class Automatic extends QueryEmitter
 {

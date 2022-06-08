@@ -7,7 +7,7 @@ namespace Hschulz\Imgix\Tests\Unit;
 use Hschulz\Imgix\FocalPointCrop;
 use Hschulz\Imgix\Size;
 use Hschulz\Imgix\UriBuilder;
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of UriBuilderTest
